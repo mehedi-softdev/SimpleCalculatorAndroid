@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="vertical"
+       >
+
+       <LinearLayout
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal"
+           android:layout_gravity="center_horizontal"
+           >
+           // layout for numbers inputs
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <EditText
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/firstNumberET"
+                android:hint="Enter first number"
+                android:textSize="18sp"
+                android:inputType="numberDecimal"
+                />
+            <EditText
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/secondNumberET"
+                android:hint="Enter second number"
+                android:textSize="18sp"
+                android:inputType="numberDecimal"
+                />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Calculate"
+                android:backgroundTint="@color/teal_700"
+                android:textColor="@color/white"
+                android:id="@+id/calculateBtn"
+                android:layout_gravity="right"
+                />
+        </LinearLayout>
+           // operation types layout
+           <LinearLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:orientation="vertical"
+               android:layout_marginLeft="10dp"
+               >
+               // radio buttons
+               <RadioGroup
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:orientation="vertical"
+                   android:id="@+id/operationTypeRG"
+
+                   >
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Operation type : "
+                       android:id="@+id/operationTypeTV"
+                       android:textSize="18sp"
+                       />
+                   <RadioButton
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="+"
+                       android:id="@+id/plusRB"
+                       android:textSize="18sp"
+                       />
+                   <RadioButton
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="-"
+                       android:id="@+id/minusRB"
+                       android:textSize="18sp"
+                       />
+                   <RadioButton
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="*"
+                       android:id="@+id/multiplyRB"
+                       android:textSize="18sp"
+                       />
+                   <RadioButton
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="/"
+                       android:id="@+id/divisionRB"
+                       android:textSize="18sp"
+                       />
+               </RadioGroup>
+           </LinearLayout>
+           // end of operation type layout
+
+       </LinearLayout>
+   </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
